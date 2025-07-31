@@ -50,7 +50,7 @@ def load_css_legacy():
                 font-weight: bold;
                 border: 2px solid #D62300;   /* Fiery Red */
                 background-color: #D62300;   /* Fiery Red */
-                color: #FFFFFF;
+                color: #FFFFFF; !important; 
             }
         </style>
     """, unsafe_allow_html=True)
