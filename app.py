@@ -212,11 +212,21 @@ and drive sustainable growth in your most important business metrics for our cli
 
             
             prompt_content = f"""
-            Generate a strategy brief using the rules in your system prompt based on these details:
-            - Campaign Name: {campaign_name}
-            ...
-            - Email Template Info: {supporting_modules}
-            """ # (Your full prompt content)
+        Please generate a comprehensive strategy brief based on the following details:
+
+        - **Campaign Name:** {campaign_name}
+        - **Start Date:** {campaign_date.strftime('%Y-%m-%d')}
+        - **Channels:** {', '.join(channels)}
+        - **Primary Goal:** {goal}
+        - **Primary Audience:** {audience}
+        - **Audience Sub-Segment:** {sub_segment}
+        - **Job To Be Done:** {jtbd}
+        - **Primary Message:** {primary_message}
+        - **Secondary Message:** {secondary_message}
+        - **Call to Action:** {cta}
+        - **Creative Considerations:** {creative_considerations}
+        - **Email Template Info:** {supporting_modules}
+        """ # (Your full prompt content)
             
             response = claude_client.messages.create(
                 model="claude-sonnet-4-20250514",
@@ -254,4 +264,5 @@ and drive sustainable growth in your most important business metrics for our cli
 # --- APP ENTRY POINT ---
 if check_password():
     run_app()
+
 
