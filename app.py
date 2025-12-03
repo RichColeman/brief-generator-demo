@@ -219,7 +219,7 @@ and drive sustainable growth in your most important business metrics for our cli
             """ # (Your full prompt content)
             
             response = claude_client.messages.create(
-                model="claude-3-5-sonnet-20240620",
+                model="claude-sonnet-4-20250514",
                 max_tokens=2048,
                 system=strategist_persona,
                 messages=[{"role": "user", "content": prompt_content}]
@@ -254,3 +254,4 @@ and drive sustainable growth in your most important business metrics for our cli
 # --- APP ENTRY POINT ---
 if check_password():
     run_app()
+
